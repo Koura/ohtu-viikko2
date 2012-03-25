@@ -1,5 +1,9 @@
 package ohtu.verkkokauppa;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Kauppa {
 
     private Ware varasto;
@@ -8,6 +12,7 @@ public class Kauppa {
     private Viitteet viitegeneraattori;
     private String kaupanTili;
 
+    @Autowired
     public Kauppa(Ware varastoh, Bank pankkih, Viitteet viitegeneraattorih) {
         varasto = varastoh;
         pankki = pankkih;
@@ -15,6 +20,9 @@ public class Kauppa {
         kaupanTili = "33333-44455";
     }
 
+    public Kauppa(Varasto instance, Pankki instance0, Viitegeneraattori instance1) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 
     public void aloitaAsiointi() {
         ostoskori = new Ostoskori();

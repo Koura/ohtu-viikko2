@@ -2,17 +2,21 @@ package ohtu.verkkokauppa;
 
 public class Kauppa {
 
-    private Varasto varasto;
-    private Pankki pankki;
+    private Ware varasto;
+    private Bank pankki;
     private Ostoskori ostoskori;
-    private Viitegeneraattori viitegeneraattori;
+    private Viitteet viitegeneraattori;
     private String kaupanTili;
 
-    public Kauppa() {
-        varasto = Varasto.getInstance();
-        pankki = Pankki.getInstance();
-        viitegeneraattori = Viitegeneraattori.getInstance();
+    public Kauppa(Ware varastoh, Bank pankkih, Viitteet viitegeneraattorih) {
+        varasto = varastoh;
+        pankki = pankkih;
+        viitegeneraattori = viitegeneraattorih;
         kaupanTili = "33333-44455";
+    }
+
+    public Kauppa(Varasto instance, Pankki instance0, Viitegeneraattori instance1) {
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 
     public void aloitaAsiointi() {

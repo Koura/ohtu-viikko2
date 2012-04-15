@@ -96,8 +96,9 @@ public class Palautus  {
 
     @Override
     public String toString() {
-        return etunimi + " " + sukunimi + " (" + opiskelijanumero + ") github:" + githubtunnus
-                + " jenkins:" + jenkinstunnus + " tunteja " + tunteja + " tehtävät: " + tehtavat+ " "
-                + "eli palautettuja yhteensä "+tehtavia;
+//        return etunimi + " " + sukunimi + " (" + opiskelijanumero + ") github:" + githubtunnus
+//                + " jenkins:" + jenkinstunnus + " tunteja " + tunteja + " tehtävät: " + tehtavat+ " "
+//                + "eli palautettuja yhteensä "+tehtavia;
+        return "viikko " +viikko + ": " + tehtavia + " tehtävää " + tehtavat + "\taikaa kului " + tunteja + " tuntia";
     }
 }

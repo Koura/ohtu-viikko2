@@ -4,12 +4,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import org.springframework.stereotype.Component;
 
-public class PlayerReader {
+public class PlayerReaderImpl implements PlayerReader {
 
     private Scanner scanner;
 
-    public PlayerReader(String pageUrl) {
+    public PlayerReaderImpl(String pageUrl) {
         try {
             URL url = new URL(pageUrl);
             scanner = new Scanner(url.openStream());
@@ -18,6 +19,7 @@ public class PlayerReader {
         }
     }
 
+    @Override
     public List<Player> getPlayers() {
         ArrayList<Player> players = new ArrayList<Player>();
 
